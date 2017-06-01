@@ -1,6 +1,6 @@
 # TOC Project 2017
 
-Template Code for TOC Project 2017
+f74036378'S Code for TOC Project 2017
 
 A telegram bot based on a finite state machine
 
@@ -43,6 +43,7 @@ python3 app.py
 
 ## Finite State Machine
 ![fsm](./img/show-fsm.png)
+this picture has some problem with no last two state
 
 ## Usage
 The initial state is set to `user`.
@@ -50,12 +51,23 @@ The initial state is set to `user`.
 Every time `user` state is triggered to `advance` to another state, it will `go_back` to `user` state after the bot replies corresponding message.
 
 * user
-	* Input: "go to state1"
-		* Reply: "I'm entering state1"
+	* Input: "show"
+		* Reply: all the thearters' name and their number
 
-	* Input: "go to state2"
-		* Reply: "I'm entering state2"
-
+	* Input: thearters' number
+		* Do: go to state : thearter_area<number>
+		* Reply: all the movies this thearter will play today and their 			number
+* thearter area<number>
+	* Input: movie number
+		* Do: go to show_time state
+		* Reply: all the time of the movie
+* show time
+	* Input: "back"
+		* Do: go back to user state
+		* Reply: nothing
+	* Input: "look"
+		* Do: go to pre_look state and go back to user
+		* Reply: the notice of the movie
 
 ## Author
-[Lee-W](https://github.com/Lee-W)
+[F74036378](https://github.com/F74036378)
